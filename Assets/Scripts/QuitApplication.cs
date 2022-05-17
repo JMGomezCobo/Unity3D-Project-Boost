@@ -1,14 +1,13 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class QuitApplication : MonoBehaviour
+namespace ProjectBoost
 {
-    void Update()
+    public class QuitApplication : MonoBehaviour
     {
-        if(Input.GetKeyDown(KeyCode.Escape))
+        private void Update()
         {
-            Debug.Log("we pushed escape");
+            if (!Input.GetKeyDown(KeyCode.Escape)) return;
+            
             Application.Quit();
         }
     }
